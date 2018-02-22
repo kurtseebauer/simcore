@@ -1,4 +1,4 @@
-package eu.primesim.core
+package eu.primesim.core.discrete
 
 import java.util.NoSuchElementException
 import java.util.SortedSet

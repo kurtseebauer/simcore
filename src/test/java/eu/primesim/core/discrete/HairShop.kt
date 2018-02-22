@@ -1,4 +1,6 @@
-import eu.primesim.core.*
+package eu.primesim.core.discrete
+
+import eu.primesim.core.RandomDistributions
 import org.junit.jupiter.api.Test
 import java.util.*
 
@@ -22,7 +24,7 @@ class HairShopTest {
 }
 
 /**
- * HairShop is our Model
+ * eu.primesim.core.discrete.HairShop is our Model
  */
 class HairShop {
 

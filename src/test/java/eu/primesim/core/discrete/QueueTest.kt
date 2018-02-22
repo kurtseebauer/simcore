@@ -1,3 +1,5 @@
+package eu.primesim.core.discrete
+
 import eu.primesim.core.*
 import org.junit.jupiter.api.Test
 import java.util.*
