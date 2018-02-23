@@ -9,7 +9,7 @@ class DifferentialEquationTest {
     @Test
     fun integrateLinear() {
 
-        var eq = Line()
+        var eq = Line(0.0)
         val timestep = 0.001
         val integrator = Euler(eq, timestep)
 
@@ -26,7 +26,7 @@ class DifferentialEquationTest {
     @Test
     fun integrateConstant() {
 
-        var eq = Constant()
+        var eq = Constant(0.0)
         val timestep = 0.001
         val integrator = Euler(eq, timestep)
 
@@ -42,7 +42,7 @@ class DifferentialEquationTest {
     @Test
     fun integrateSquare() {
 
-        var eq = Square()
+        var eq = Square(0.0)
         val timestep = 0.001
         val integrator = Euler(eq, timestep)
 
@@ -58,7 +58,7 @@ class DifferentialEquationTest {
     /**
      * dy = x
      */
-    class Line : DifferentialEquation {
+    class Line(override var value: Double) : DifferentialEquation() {
         override fun dy(x: Double): Double {
             return x
         }
@@ -67,7 +67,7 @@ class DifferentialEquationTest {
     /**
      * dy = 1
      */
-    class Constant : DifferentialEquation {
+    class Constant(override var value: Double) : DifferentialEquation() {
         override fun dy(x: Double): Double {
             return 1.0
         }
@@ -76,7 +76,7 @@ class DifferentialEquationTest {
     /**
      * dy = x^2
      */
-    class Square : DifferentialEquation {
+    class Square(override var value: Double) : DifferentialEquation() {
         override fun dy(x: Double): Double {
             return x * x
         }
